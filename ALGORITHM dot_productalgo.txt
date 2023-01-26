@@ -1,0 +1,54 @@
+ALGORITHM dot_product
+VAR
+    
+BEGIN
+    set_instructions
+END
+PROCEDURE dot_product(v1:vector1 : ARRAY_OF FLOAT[50]; v2:vector2 : ARRAY_OF FLOAT[50];)
+VAR
+    ps: FLOAT
+BEGIN
+    ps:= v1*v2
+END
+ALGORITHM produit_scalaire
+PROCEDURE dot_product(v1:vector1 : ARRAY_OF FLOAT[50]; v2:vector2 : ARRAY_OF FLOAT[50];)
+VAR
+    ps: FLOAT
+BEGIN
+    ps:= v1*v2
+    
+END
+VAR
+    vectors : vectors : ARRAY_OF FLOAT[2][n];
+    v1: vector1 : ARRAY_OF FLOAT[50]; v2:vector2 : ARRAY_OF FLOAT[50];
+BEGIN
+    write ("write two vectors")
+    read ( v1,v2)
+    dot_product(v1,v2)
+    IF (dot_product=0) THEN
+        write("the two vectors are  orthogonal")
+    ELSE
+        write("the two vectors are not orthogonal")
+    END_IF
+END
+ALGORITHM produit_scalaire2
+FUNCTION produit_scalaire(v1:vector1:ARRAY_OF FLOAT[50];v2:vector1 : ARRAY_OF FLOAT[50];) : FLOAT
+VAR
+    ps: FLOAT
+BEGIN
+    ps:= v1*v2
+    RETURN ps ;
+END
+VAR
+    vectors : vectors : ARRAY_OF FLOAT[2][n];
+    v1: vector1 : ARRAY_OF FLOAT[50]; v2:vector2 : ARRAY_OF FLOAT[50];
+BEGIN
+     write ("write two vectors")
+    read ( v1,v2)
+       write(produit_scalaire2(v1,v2))
+    IF (v1*v2=0) THEN
+        write("the two vectors are orthogonal")
+    ELSE
+        write&("the two vectors are not orthogonal")
+    END_IF
+END
