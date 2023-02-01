@@ -1,0 +1,14 @@
+PROCEDURE insort_sort(ARRAY_OF INTEGER[t:n])
+VAR
+    i,j,n,tmp = INTEGER
+BEGIN
+    FOR i FROM i-1 TO N-1 STEP step  DO
+    tmp := array[i]
+    j:=i 
+    WHILE (j>0) and (array[j-1]>tmp)DO
+        array[j]:=array[j-1]
+        j:=j-1
+    END_WHILE
+        array[j]:=tmp
+    END_FOR
+END
